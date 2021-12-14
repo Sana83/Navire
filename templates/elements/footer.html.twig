@@ -1,0 +1,18 @@
+{# empty Twig template #}
+<footer class="footer fixed-bottom bg-promary">
+    {% block footer %}
+        <div class="row">
+            <div class="col-4 text-left txt-footer">
+                <a href="#" class="text-white">Contact</a><br>
+                <a href="https://bts-sio.lyc-bonaparte.fr/" target="_blank" class="text-white">Présentation BTS SIO</a>
+            </div>
+            <div class="col-4 text-center">
+                <img class="img-fluid" src="{{ asset('images/753331.jpg') }}">
+            </div>
+            <div class="col-4 text-right txt-footer">
+                <a href="#" class="text-white">Mentions légales</a><br>
+                <a href="#" class="text-white">Plan du site</a>
+            </div>
+        </div>
+    {% endblock %}
+</footer>
