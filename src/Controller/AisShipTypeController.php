@@ -8,20 +8,12 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AisShipTypeController extends AbstractController
 {
-    /**
-     * @Route("/aisshiptype", name="aisshiptype")
-     */
-    public function index(): Response
-    {
-        return $this->render('aisshiptype/index.html.twig', [
-            'controller_name' => 'AisShipTypeController',
-        ]);
-    }
+    
     
     /**
-     * @Route("/voirtous", name"voirtous")
+     * @Route("/voirtous", name="voirtous")
      */
-    public function voirtous(): Response {
+    public function voirTous(): Response {
         $types = [
             1 => 'Reserved',
             2 => 'Wing In Groud',
@@ -37,4 +29,14 @@ class AisShipTypeController extends AbstractController
             'types' => $types,
         ]);
     }
+    /**
+     * @Route("/aisshiptype", name="aisshiptype")
+     */
+    public function index(): Response
+    {
+        return $this->render('aisshiptype/index.html.twig', [
+            'controller_name' => 'AisShipTypeController',
+        ]);
+    }
+    
 }
