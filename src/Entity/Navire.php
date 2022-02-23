@@ -56,6 +56,12 @@ class Navire
      */
     private $eta;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=AisShipType::class, inversedBy="no")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $leType;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -117,6 +123,18 @@ class Navire
     public function setEta(?\DateTimeInterface $eta): self
     {
         $this->eta = $eta;
+
+        return $this;
+    }
+
+    public function getLeType(): ?AisShipType
+    {
+        return $this->leType;
+    }
+
+    public function setLeType(?AisShipType $leType): self
+    {
+        $this->leType = $leType;
 
         return $this;
     }
