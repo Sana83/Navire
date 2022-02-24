@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=AisShipTypeRepository::class)
+ * @ORM\Table(name="aisshiptype")
  */
 class AisShipType
 {
