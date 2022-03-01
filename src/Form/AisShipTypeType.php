@@ -11,7 +11,8 @@ class AisShipTypeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('field_name')
+            ->add('aisShipType', TextType::class)
+            ->add('libelle', TextType::class)
         ;
     }
 
