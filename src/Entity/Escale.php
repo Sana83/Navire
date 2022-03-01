@@ -18,24 +18,24 @@ class Escale
     private $id;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", name="dateheurearrivee")
      */
     private $dateHeureArrivee;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", name="dateheuredepart")
      */
     private $dateHeureDepart;
 
     /**
      * @ORM\ManyToOne(targetEntity=Navire::class, inversedBy="lesEscales")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=false, name="idnavire")
      */
     private $leNavire;
 
     /**
      * @ORM\ManyToOne(targetEntity=Port::class, inversedBy="lesEscales")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=false, name="idPort")
      */
     private $lePort;
 
